@@ -63,18 +63,18 @@
   </style>
   
   <!-- Search results container -->
-  <!-- <div class="w3-container">
-    <div class="w3-card" > -->
+  <div class="w3-container">
+    <div class="w3-card" >
    
    
    <!-- here i need pagination for the search results -->
-   <div class="pagination w3-container">
+   <!-- <div class="pagination w3-container">
     <div class="w3-bar">
-    <% for (let i = 1; i <= totalPages; i++) { %>
-        <a href="/?page=<%= i %>" class="w3-button w3-bar-item <%= i === page ? 'w3-blue' : '' %>"><%= i %></a>
-    <% } %>
+    <%# for (let i = 1; i <= totalPages; i++) { %>
+        <a href="/?page=<%#= i %>" class="w3-button w3-bar-item <%#= i === page ? 'w3-blue' : '' %>"><%#= i %></a>
+    <%# } %>
 </div>
-</div>
+</div> -->
     <!-- use if condition
     <%# if (authors.length === 0) { %>
       <h4>No authors found</h4>
@@ -82,13 +82,13 @@
       <h4>Search Results:</h4>
       <%# authors.forEach(author => { %>
         <div style="border: solid 0px";>
-          <a href="#" onclick="showUrlContent('/authors/<%= author.id %>', 'resultContainer')"><%= author.name %></a>
+          <a href="#" onclick="showUrlContent('/authors/<%#= author.id %>', 'resultContainer')"><%#= author.name %></a>
         </div>
       <%# }) %>
     <%# } %> -->
-    <br>
+    <!-- <br>
   </div>
-</div>
+</div> -->
 <br>
 
       <h4 >Search Results:</h4>
