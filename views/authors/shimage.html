@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Show Image</title>
+  <style>
+    /* Style for hiding result initially */
+    .result {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <!-- Link 1 -->
+    <li>
+      <a href="#" onclick="showImage('image1.png', 'resultContainer')">Link 1</a>
+    </li>
+
+    <!-- Link 2 -->
+    <li>
+      <a href="#" onclick="showImage('image2.png', 'resultContainer')">Link 2</a>
+    </li>
+
+    <!-- Add more links as needed -->
+
+  </ul>
+
+  <!-- Separate result container for image -->
+  <div class="result" id="resultContainer"></div>
+
+  <script>
+    function showImage(imagePath, resultContainerId) {
+      // Get the result container by its id
+      const resultContainer = document.getElementById(resultContainerId);
+
+      // Set the result image and display it
+      resultContainer.innerHTML = `<img src="${imagePath}" alt="Result Image">`;
+      resultContainer.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

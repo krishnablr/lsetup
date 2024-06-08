@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Show Result</title>
+  <style>
+    /* Style for hiding result initially */
+    .result {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <!-- Link 1 -->
+    <li>
+      <a href="#" onclick="showResult('Result for Link 1', 'resultContainer')">Link 1</a>
+    </li>
+
+    <!-- Link 2 -->
+    <li>
+      <a href="#" onclick="showResult('Result for Link 2', 'resultContainer')">Link 2</a>
+    </li>
+
+    <!-- Add more links as needed -->
+
+  </ul>
+
+  <!-- Separate result container -->
+  <div class="result" id="resultContainer"></div>
+
+  <script>
+    function showResult(resultText, resultContainerId) {
+      // Get the result container by its id
+      const resultContainer = document.getElementById(resultContainerId);
+
+      // Set the result text and display it
+      resultContainer.textContent = resultText;
+      resultContainer.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

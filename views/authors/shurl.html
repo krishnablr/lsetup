@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Show URL Content</title>
+  <style>
+    /* Style for hiding result initially */
+    .result {
+      display: none;
+    }
+
+    /* Style for iframe */
+    .result iframe {
+      width: 100%;
+      height: 300px; /* Set the height as needed */
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <!-- Link 1 -->
+    <li>
+      <a href="#" onclick="showUrlContent('http://localhost:9009/authors/65478a2a9962499a53649dc5', 'resultContainer')">Link 1</a>
+    </li>
+
+    <!-- Link 2 -->
+    <li>
+      <a href="#" onclick="showUrlContent('http://localhost:9009/authors/6547955b6b0cf8f098fca349', 'resultContainer')">Link 2</a>
+    </li>
+
+    <!-- Add more links as needed -->
+
+  </ul>
+
+  <!-- Separate result container for URL content -->
+  <div class="result" id="resultContainer"></div>
+
+  <script>
+    function showUrlContent(url, resultContainerId) {
+      // Get the result container by its id
+      const resultContainer = document.getElementById(resultContainerId);
+
+      // Set the result URL content using an iframe
+      resultContainer.innerHTML = `<iframe src="${url}"></iframe>`;
+      resultContainer.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

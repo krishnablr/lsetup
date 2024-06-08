@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Welcome To Home Page</h1>
+
+  <!--all users link-->
+    <div style="text-align: center;">
+        <a href="/users">All Users</a>
+    </div>
+
+<!--Search Users-->
+    
+<div style="text-align: center;">
+    <a href="/authors">Search Users</a>
+</div>
+
+<!--logout link-->
+    <div style="text-align: right;">
+        <a href="/auth/logout">Logout</a>
+    </div>
+
+<!-- align to cente -->
+        <!-- <div>
+           <h1>Hi, <%#- name %></h1>
+        </div>
+     -->
+        <!-- use if condition -->
+        <% if (name) { %>
+            <h1>Hi, <%= name %></h1>
+        <% } %>
+        
+
+        
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+   <div class="w3-container w3-content">
+   <h2>Adding Page</h2>  
+  </div>
+   <form action="/authors" method = "POST">
+    <div class="w3-container w3-content">
+    <div class="w3-container w3-content">
+      <label>Name:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" name="name" value="<%= author.name %>"> 
+      <label>*</label>
+      <br><br>
+      <label>Skill&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <select name="skill" id="lang">
+         <optgroup label="skill-choice">
+           <option value="">Select the Skill</option>
+           <option value="plumber">Plumber</option>
+           <option value="electrician">Electrician</option>
+           <option value="carpenter">Carpenter</option>
+           <option value="Cook">Cook</option>
+           <option value="physio">PhysioTherapy</option>
+         </optgroup>
+         </select>
+         <label>*</label>
+
+         <br><br>
+
+         <label>Place&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+         <select name="place" id="lang">
+            <optgroup label="place-choice">
+              <option value="">Select the Place</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Kolkatta">Kolkatta</option>
+              <option value="Chennai">Chennai</option>
+            </optgroup>
+            </select>
+            <label>*</label>
+<br><br>
+            
+            <label>Number&nbsp;&nbsp;</label>
+            <input type="number" name="num" value="<%= author.num %>">
+            <label>*</label>
+            <br><br>
+
+            <p>* &rarr;  Required/Mandatory</p>
+            &nbsp;&nbsp;<a href="/authors">Cancel</a>&nbsp;&nbsp;
+    <button type="submit" value="Submit">Create</button>
+  </div>
+</div>
+   </form>
+

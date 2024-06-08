@@ -1,0 +1,134 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+  <title>Document</title>
+</head>
+<!-- <hr class="w3-content" style="border: solid 1px grey"> -->
+  <!-- use if condition -->
+  
+<div class="w3-container ">
+<div id="home" class="w3-content w3-border w3-round-xxlarge" style="border: solid 0px rgb(76, 0, 255);">
+      <form action="/authors/a" method="post">
+      <!-- <label>Name:</label> -->
+      <br>
+      <div class="w3-container ">
+      <div class="w3-container w3-content ">
+      <label >
+        <!-- Skill:&nbsp;&nbsp;</label> -->
+      <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Place:</label><br> -->
+      </div>
+
+    </div>
+    <div class="w3-container " >
+
+      <select name="skill" id="lang">
+        <optgroup label="skill-choice">
+          <option value="nonExistentField">Skill</option>
+          <option value="plumber">Plumber</option>
+          <option value="electrician">Electrician</option>
+          <option value="carpenter">Carpenter</option>
+          <option value="Cook">Cook</option>
+          <option value="physio">PhysioTherapy</option>
+        </optgroup>
+      </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+      <select name="place" id="lang">
+        <optgroup label="Place-choice">
+          <option value="nonExistentField">Place</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Calcutta">Calcutta</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Chennai">Chennai</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="w3-container">
+      <button value="submit" class="w3-btn w3-blue-grey w3-margin w3-round-xxlarge">Search</button>
+      <br><br>
+    </div>
+      <!-- <button type="submit">Search</button>--> 
+    </form>
+
+      <!-- reduce the width of the search results -->
+  <style>
+    .w3-card {
+      width: 75%;
+    }
+  </style>
+  
+  <!-- Search results container -->
+  <!-- <div class="w3-container">
+    <div class="w3-card" > -->
+   
+   
+   <!-- here i need pagination for the search results -->
+   <div class="pagination w3-container">
+    <div class="w3-bar">
+    <% for (let i = 1; i <= totalPages; i++) { %>
+        <a href="/?page=<%= i %>" class="w3-button w3-bar-item <%= i === page ? 'w3-blue' : '' %>"><%= i %></a>
+    <% } %>
+</div>
+</div>
+    <!-- use if condition
+    <%# if (authors.length === 0) { %>
+      <h4>No authors found</h4>
+    <%# } else { %>
+      <h4>Search Results:</h4>
+      <%# authors.forEach(author => { %>
+        <div style="border: solid 0px";>
+          <a href="#" onclick="showUrlContent('/authors/<%= author.id %>', 'resultContainer')"><%= author.name %></a>
+        </div>
+      <%# }) %>
+    <%# } %> -->
+    <br>
+  </div>
+</div>
+<br>
+
+      <h4 >Search Results:</h4>
+
+
+<% authors.forEach(author => { %>
+
+  <div style="border: solid 0px "; > 
+     <a href="#" onclick="showUrlContent('/authors/<%= author.id %>', 'resultContainer')"><%= author.name %></a>
+  </div>
+<% }) %>
+
+<br>
+
+
+</div>  
+<br>
+
+  </div>
+  </div>
+
+
+   <!-- Separate result container -->
+  <br>
+  <div class="w3-container">
+  <div class="result" id="resultContainer"></div>
+
+  <script>
+    function showUrlContent(url, resultContainerId) {
+      // Get the result container by its id
+      const resultContainer = document.getElementById(resultContainerId);
+
+      // Set the result URL content using an iframe
+      resultContainer.innerHTML = `<iframe src="${url}"></iframe>`;
+      resultContainer.style.display = 'block';
+    }
+  </script>
+   <br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+  </div>
+</div>
+
+<!-- <hr class="w3-content" style="border: solid 1px grey"> -->

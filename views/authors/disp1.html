@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Show Result</title>
+</head>
+<body>
+
+  <ul>
+    <!-- Link 1 -->
+    <li>
+      <a href="#" onclick="showResult('Result for Link 1', 'result1')">Link 1</a>
+      <div class="result" id="result1"></div>
+    </li>
+
+    <!-- Link 2 -->
+    <li>
+      <a href="#" onclick="showResult('Result for Link 2', 'result2')">Link 2</a>
+      <div class="result" id="result2"></div>
+    </li>
+
+    <!-- Add more links as needed -->
+
+  </ul>
+
+  <script>
+    function showResult(resultText, resultId) {
+      // Get the result div by its id
+      const resultDiv = document.getElementById(resultId);
+
+      // Set the result text
+      resultDiv.textContent = resultText;
+    }
+  </script>
+
+</body>
+</html>
